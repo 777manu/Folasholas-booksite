@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elavelle House | A House For Stories</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+                <!-- Used Playfair Display, Inter, and Alex Brush --> 
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            base: '#f8f7f5',       /* Warm beige/cream background */
+                            accent: '#947155',     /* Earthy brown for buttons/highlights */
+                            accentHover: '#7a5d45',
+                            dark: '#27231e',       /* Deep dark brown/charcoal */
+                            text: '#4a453f',       /* Softer dark brown for readable body text */
+                            border: '#e8e5df'      /* Subtle border color */
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                        script: ['"Alex Brush"', 'cursive']
+                    },
+                    backgroundImage: {
+                        'hero-texture': "linear-gradient(to right, rgba(248, 247, 245, 0.95), rgba(248, 247, 245, 0.8)), url('https://images.unsplash.com/photo-1455390582262-044cdead2708?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')"
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .aesthetic-line::after {
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 1px;
+            background-color: #947155;
+            margin-left: 16px;
+            vertical-align: middle;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-brand-text bg-brand-base antialiased selection:bg-brand-accent selection:text-white">
+
+    <header class="bg-brand-base/90 backdrop-blur-md sticky top-0 z-50 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-6 group">
+                <!-- Placeholder for the logo's image -->
+                <div class="h-16 w-16 bg-brand-border/50 border border-brand-dark/20 flex items-center justify-center rounded-sm transition-transform group-hover:scale-105">
+                    <span class="text-xs text-brand-dark/50">Logo</span>
+                </div>
+                
+                <div class="flex flex-col">
+                    <div class="text-5xl font-serif font-bold text-brand-dark tracking-tight group-hover:text-brand-accent transition-colors">
+                        EH
+                    </div>
+                    <div class="hidden sm:block text-lg font-sans tracking-[0.25em] uppercase text-brand-dark mt-1">
+                        Elavelle House
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm text-brand-dark tracking-wide">
+                <a href="#" class="hover:text-brand-accent transition-colors pb-1">Home</a>
+                <a href="#books" class="hover:text-brand-accent transition-colors pb-1">Books</a>
+                <a href="#about" class="hover:text-brand-accent transition-colors pb-1">About</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors pb-1">Contact</a>
+            </nav>
+
+            <!-- Socials & Mobile Toggle -->
+            <div class="flex items-center gap-5">
+                <div class="hidden sm:flex items-center gap-5 text-brand-dark">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/elavellehouse/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors" aria-label="Instagram">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@elavellehouse" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors" aria-label="TikTok">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/profile.php?id=61594231269786" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors" aria-label="Facebook">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-brand-dark focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-base border-b border-brand-border absolute w-full shadow-lg">
+            <nav class="flex flex-col px-6 py-6 space-y-4 text-sm uppercase tracking-widest text-brand-dark text-center">
+                <a href="#" class="hover:text-brand-accent transition-colors">Home</a>
+                <a href="#books" class="hover:text-brand-accent transition-colors">Books</a>
+                <a href="#about" class="hover:text-brand-accent transition-colors">About</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-hero-texture bg-cover bg-center bg-no-repeat pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center justify-between gap-16">
+            
+            <!-- Hero Left Content -->
+            <div class="w-full md:w-1/2 space-y-8 text-center md:text-left">
+                <div class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-dark/70 aesthetic-line inline-block md:block">
+                    New Release
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-brand-dark">
+                    Stories that make room for growth.
+                </h1>
+                
+                <p class="text-lg md:text-xl text-brand-text max-w-md mx-auto md:mx-0 font-light leading-relaxed">
+                    A space for meaningful stories, thoughtful conversations, and books that meet people where they are.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start">
+                    <!-- Amazon CTA -->
+                    <a href="https://amzn.eu/d/0iRZG67E" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-accent hover:bg-brand-accentHover text-white px-8 py-4 text-sm font-medium tracking-wide uppercase transition-all duration-300 shadow-md hover:shadow-lg rounded-sm">
+                        Buy on Amazon
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                    <!-- Secondary CTA -->
+                    <a href="#books" class="inline-flex items-center justify-center border border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white px-8 py-4 text-sm font-medium tracking-wide uppercase transition-all duration-300 rounded-sm">
+                        Discover More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Right Image (Book) -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                <div class="relative transform md:rotate-2 hover:rotate-0 transition-transform duration-700 ease-out">
+                    <!-- Decorative background element -->
+                    <div class="absolute inset-0 bg-brand-accent/10 blur-2xl transform scale-110 -z-10"></div>
+                    <img src="images\book(s)\Front Cover.jpeg" alt="The Midnight Keeper - Book Cover" class="w-64 sm:w-80 md:w-96 h-auto object-cover border border-white/30 shadow-2xl rounded-sm">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="books" class="bg-white py-24 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <!-- Section Header -->
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="font-serif text-4xl text-brand-dark">They Grew: So Did I</h2>
+                <div class="h-[1px] w-16 bg-brand-accent mx-auto"></div>
+                <p class="font-serif italic text-xl text-brand-text">Dear Parent: The Letters I Wish Someone Had Written to Me</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Book Image & Details (Left) -->
+                <div class="lg:col-span-4 flex flex-col items-center lg:items-start space-y-6">
+                    <img src="images\book(s)\Front Cover.jpeg" alt="Featured Book" class="w-full max-w-[300px] h-auto object-cover shadow-xl border border-brand-border rounded-sm">
+                    
+                    <div class="w-full max-w-[300px] space-y-4">
+                        <a href="#" class="block w-full text-center bg-brand-base border border-brand-border hover:border-brand-accent text-brand-dark py-3 text-sm font-medium transition-colors rounded-sm">
+                            Read Excerpt
+                        </a>
+                        <div class="flex items-center justify-center gap-1 text-brand-accent">
+                            <!-- 5 Stars -->
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Synopsis & Reviews (Right side) -->
+                <div class="lg:col-span-8 space-y-12">
+                    
+                    <!-- Blurb -->
+                    <div class="prose prose-stone max-w-none space-y-4 text-brand-text font-light leading-relaxed text-lg">
+                        <p>Dear parent, I know how heavy the silence can feel at the end of a long day, when you're sitting on the edge of the bed, looking at a messy house and wondering if you're doing any of this right.</p>
+                        <p>I know the quite grief of watching your peers climb professional ladders while you choose to step back, protect your time, and be present for your children.</p>
+                        <p>This book is my gift to you.</p>
+                        <p>It's a reminder that you don't have to be a perfect parent. You simply have to keep showing up, keep learning and keep loving.</p>
+                        <p>And as you watch them develop, you may discover something beautiful: as they grew, you were growing alongside them too.</p>
+                    </div>
+
+                    <!-- Review Quotes -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Quote 1 -->
+                        <div class="bg-brand-base p-8 rounded-sm border border-brand-border relative">
+                            <div class="text-brand-accent/20 absolute top-4 left-4 font-serif text-6xl leading-none">"</div>
+                            <p class="relative z-10 font-serif text-lg text-brand-dark italic mb-6">"An absolute masterpiece. It changed the way I look at the quiet moments in my life."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-border overflow-hidden">
+                                    <img src="https://placehold.co/100x100/947155/ffffff?text=A R" alt="Reviewer" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-brand-dark">Anonymous Reviewer</h4>
+                                    <p class="text-xs text-brand-text uppercase tracking-wider">Anonymous reviewer</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quote 2 -->
+                        <div class="bg-brand-base p-8 rounded-sm border border-brand-border relative">
+                            <div class="text-brand-accent/20 absolute top-4 left-4 font-serif text-6xl leading-none">"</div>
+                            <p class="relative z-10 font-serif text-lg text-brand-dark italic mb-6">"I couldn't put it down. The prose is as elegant as it is deeply profound."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-brand-border overflow-hidden">
+                                    <img src="https://placehold.co/100x100/947155/ffffff?text=A R" alt="Reviewer" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-brand-dark">Anonymous Reviewer</h4>
+                                    <p class="text-xs text-brand-text uppercase tracking-wider">Anonymous reviewer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-brand-base py-24 border-b border-brand-border overflow-hidden relative">
+        <!-- Decorative subtle background text -->
+        <div class="absolute -right-20 top-20 text-[12rem] font-serif text-brand-dark/5 whitespace-nowrap pointer-events-none select-none">
+            Elavelle House
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 relative z-10">
+            
+            <!-- Author Image on the Left side -->
+            <div class="w-full lg:w-5/12 flex justify-center lg:justify-start">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-brand-accent/20 translate-x-4 translate-y-4 rounded-sm"></div>
+                    <img src="images\author\Headshot.jpeg" alt="Author Headshot" class="relative w-full max-w-[400px] h-auto object-cover border border-white shadow-lg rounded-sm grayscale hover:grayscale-0 transition-all duration-700">
+                </div>
+            </div>
+
+            <!-- Bio on the Right side -->
+            <div class="w-full lg:w-7/12 space-y-8 relative">
+                <div class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-dark/70 aesthetic-line">
+                    A House For Stories
+                </div>
+                
+                <h2 class="font-serif text-3xl md:text-4xl text-brand-dark leading-tight max-w-xl">
+                    Folashola Sinclair is a wife, a nurse, but above all a mother, who has learned to find the holy wonder buried beneath the daily grind.
+                </h2>
+                
+                <p class="text-brand-text font-light leading-relaxed max-w-xl text-lg">
+                    She lives in Wales with her husband and their four sons, and is dedicated to sharing honest wisdom, building emotional safety in the home, and anchoring the family legacy in unshakeable faith.
+                </p>
+
+                <!-- Script Accent -->
+                <div class="pt-8 pl-4 md:pl-12">
+                    <div class="font-script text-5xl md:text-6xl lg:text-7xl text-brand-accent -rotate-6 transform origin-left leading-[1.2] drop-shadow-sm">
+                        Better stories.<br>Brighter tomorrows.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-brand-dark text-white py-24 text-center border-t-4 border-brand-accent">
+        <div class="max-w-2xl mx-auto px-6 flex flex-col items-center">
+            <div class="flex items-center justify-center gap-4 mb-6 w-full opacity-80">
+                <div class="h-[1px] w-12 bg-brand-accent"></div>
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-accent">Join the Conversation</span>
+                <div class="h-[1px] w-12 bg-brand-accent"></div>
+            </div>
+            
+            <h2 class="font-serif text-3xl md:text-4xl font-normal leading-snug mb-10 text-brand-base">
+                Be the first to hear about new releases, reflections and what's coming next at Elavelle House.
+            </h2>
+            
+            <form class="w-full max-w-md mx-auto flex flex-col sm:flex-row h-auto sm:h-14 shadow-lg rounded-sm overflow-hidden">
+                <input type="email" placeholder="Your email address..." required aria-label="Email Address" 
+                    class="w-full sm:flex-1 h-14 sm:h-full px-5 bg-brand-base/10 backdrop-blur-sm text-white outline-none border border-brand-base/20 focus:border-brand-accent text-sm placeholder:text-gray-400 mb-3 sm:mb-0 transition-colors">
+                <button type="submit" class="h-14 sm:h-full px-8 bg-brand-accent hover:bg-brand-accentHover text-white text-sm font-medium uppercase tracking-wider transition-colors">
+                    Subscribe
+                </button>
+            </form>
+            
+            <p class="font-serif italic text-brand-base/60 text-sm mt-8">
+                No noise. Just things worth reading.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-[#1c1915] py-16 border-t border-white/5 text-brand-base/70">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center md:items-start gap-10 text-center md:text-left">
+            
+            <!-- Logo & Copyright -->
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <a href="#" class="flex items-center gap-3">
+                    <div class="text-3xl font-serif font-bold text-white tracking-tight">EH</div>
+                    <div class="text-sm font-sans tracking-[0.2em] uppercase text-white mt-1">Elavelle House</div>
+                </a>
+                <p class="text-xs uppercase tracking-wider opacity-60 mt-2">
+                    &copy; 2026 Folashola Sinclair. All rights reserved.
+                </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex flex-col sm:flex-row gap-8 text-sm uppercase tracking-widest font-medium">
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="hover:text-brand-accent transition-colors">Home</a>
+                    <a href="#books" class="hover:text-brand-accent transition-colors">Books</a>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <a href="#about" class="hover:text-brand-accent transition-colors">About</a>
+                    <a href="#journal" class="hover:text-brand-accent transition-colors">Journal</a>
+                </div>
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="hover:text-brand-accent transition-colors">Contact</a>
+                    <a href="#" class="hover:text-brand-accent transition-colors">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            // Toggle mobile menu visibility
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
