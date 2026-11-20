@@ -50,6 +50,9 @@
             vertical-align: middle;
         }
         html { scroll-behavior: smooth; }
+        a, a * {
+            text-decoration: none !important;
+        }
     </style>
 </head>
 <body class="font-sans text-brand-text bg-brand-base antialiased selection:bg-brand-accent selection:text-white">
@@ -60,15 +63,10 @@
             <!-- Logo -->
             <a href="#" class="flex items-center gap-6 group">
                 <!-- Placeholder for the logo's image -->
-                <div class="h-16 w-16 bg-brand-border/50 border border-brand-dark/20 flex items-center justify-center rounded-sm transition-transform group-hover:scale-105">
-                    <span class="text-xs text-brand-dark/50">Logo</span>
-                </div>
+                <img src="images/logo/ehlogo.jpg" alt="Elavelle House Logo" class="h-16 w-16 object-contain rounded-sm transition-transform group-hover:scale-105">
                 
                 <div class="flex flex-col">
-                    <div class="text-5xl font-serif font-bold text-brand-dark tracking-tight group-hover:text-brand-accent transition-colors">
-                        EH
-                    </div>
-                    <div class="hidden sm:block text-lg font-sans tracking-[0.25em] uppercase text-brand-dark mt-1">
+                    <div class="text-lg font-sans font-bold tracking-[0.25em] uppercase text-brand-dark mt-1">
                         Elavelle House
                     </div>
                 </div>
@@ -289,9 +287,18 @@
                 Be the first to hear about new releases, reflections and what's coming next at Elavelle House.
             </h2>
             
-            <form class="w-full max-w-md mx-auto flex flex-col sm:flex-row h-auto sm:h-14 shadow-lg rounded-sm overflow-hidden">
-                <input type="email" placeholder="Your email address..." required aria-label="Email Address" 
+            <!-- form configured for Google Workspace delivery -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="w-full max-w-md mx-auto flex flex-col sm:flex-row h-auto sm:h-14 shadow-lg rounded-sm overflow-hidden">
+                
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="apikey" value="YOUR_ACTUAL_ACCESS_KEY_HERE">
+                
+                <!-- Custom subject line for your Google Workspace notification -->
+                <input type="hidden" name="subject" value="New Subscriber: Elavelle House">
+                
+                <input type="email" name="email" placeholder="Your email address..." required aria-label="Email Address" 
                     class="w-full sm:flex-1 h-14 sm:h-full px-5 bg-brand-base/10 backdrop-blur-sm text-white outline-none border border-brand-base/20 focus:border-brand-accent text-sm placeholder:text-gray-400 mb-3 sm:mb-0 transition-colors">
+
                 <button type="submit" class="h-14 sm:h-full px-8 bg-brand-accent hover:bg-brand-accentHover text-white text-sm font-medium uppercase tracking-wider transition-colors">
                     Subscribe
                 </button>
